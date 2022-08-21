@@ -1,5 +1,5 @@
 :root{
-    
+
     --linear-gradient: linear-gradient(to right, hsl(249, 99%, 64%) , hsl(278, 94%, 30%));
     --Red: hsl(0, 100%, 66%);
     --White: hsl(0, 0%, 100%);
@@ -19,7 +19,7 @@
 html {
     font-size: 62.5%;
     font-family: 'Space Grotesk', sans-serif;
-    
+
 }
 
 /* GENERAL PORPOSE */
@@ -32,9 +32,9 @@ body {
 .card-container{
     display: grid;
     place-items: center;
-    
 
-    
+
+
 }
 .bg-card--main{
     display: grid;
@@ -48,27 +48,22 @@ body {
     color: var(--White);
 }
 
-    .bg-card--content{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-
-    }
 
 .bg-card--front{
-    display: grid;
-    place-items: center;
-  
-    position: absolute;
-   margin-top: 200px;
+
+   display: grid;
+   place-items: center;
+   position: relative;
+   margin-top: 150px;
    margin-right: 50px;
    z-index: 1;
 
-    
+
 }
 
 .bg-card--info{
     width: 85%;
+  
     position: absolute;
     font-size: 1rem;
     letter-spacing: 3px;
@@ -77,11 +72,11 @@ body {
 }
 #logo{
     width: 50px;
- 
+
 }
 .bg-card--info h3{
     font-size: 1.6rem;
-    
+
     font-weight: 400;
     margin-top: 30px;
     color: var(--White);
@@ -102,12 +97,11 @@ body {
 
 .bg-card--back{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    margin-left: 70px;
-   
+   margin-top: -350px;
+   margin-left: 100px;
+
 
 
 
@@ -131,7 +125,7 @@ body {
     place-items: center;
     width: 100%;
     height: 100%;
-    margin-top: 100px;
+    margin-top: 90px;
 }
 .card-details{
     display: flex;
@@ -173,8 +167,8 @@ body {
     margin-right: 20px;
     font-size: 2rem;
     outline: none;
-   
-  
+
+
 }
 /* error in border  */
 .error-border{
@@ -222,7 +216,7 @@ body {
     font-size: 1.7rem;
     color: var(--White);
     background-color: var(--Very-dark-violet);
- 
+
     font-weight: 400;
     letter-spacing: 2px;
     text-align: center;
@@ -235,7 +229,7 @@ body {
     width: 100%;
     height: 100%;
     margin-top: 50px;
-    
+
 
 }
 .card-details--success{
@@ -259,41 +253,42 @@ body {
     font-size: 1.8rem;
     margin-top: -20px;
 }
-
-.attribution{
+.attribution-desk{
+    display:none;
+}
+.attribution-mobile{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--Very-dark-violet);
-    color: var(--White);
+    color: var(--linear-gradient);
     font-size: 1.2rem;
-    width: 100%;
+    width: 100vw;
     height: 50px;
     text-align: center;
-    bottom: 0;
-    position: absolute;
+    margin-top: 50px;
+
+
 }
-.attribution a{
-    color: var(--White);
+.attribution-mobile a{
+    color: var(--Dark-grayish-violet);
     margin: 0 10px;
 }
 /* DESKTOP  and LAPTOP */
 
 @media screen and (min-width: 1024px) {
-    
+
     .card-container{
         display: grid;
         grid-template-columns: 1fr 1fr;
 
         justify-content: space-between;
-       
+
     }
     .bg-card--main{
         background-image: url(/images/bg-main-desktop.png);
         height: 100vh;
-       width: 35vw;
-        margin-right: auto;
-       
+        width: 35vw;
+
     }
 
     .bg-card--front{
@@ -303,42 +298,42 @@ body {
         align-items: center;
         position: absolute;
         margin-top: -250px;
-        margin-left: 25vw;
+        margin-left: 28vw;
 
     }
     .bg-card--info{
         font-size: 1.3rem;
-    
+
     }
     #logo{
         width: 70px;
-     
+
     }
     .bg-card--info h3{
         font-size:2.2rem;
         margin-top: 40px;
     }
-    
+
     .bg-card--info .card-name{
         margin-top: 27px;
     }
-    
-    
+
+
     .bg-card--back{
         display: flex;
-        margin-top: 250px;
-        margin-left: 32vw;
-    
+        margin-top: 260px;
+        margin-left: 25vw;
+
     }
     /* bg-card--back rotation  */
-  
+
     .bg-card--back p{
         margin-left: 220px;
 
     }
-    
+
     .card{
-        width: 380px;
+        width: 400px;
         height: 100%;
     }
     .card-form{
@@ -348,7 +343,7 @@ body {
     }
     .card-details{
         width: 450px;
-    
+
     }
     .card-details--items{
         width: 450px;
@@ -356,17 +351,31 @@ body {
     .success-container{
         display: none;
         place-items: center;
+        
         width: 70vw;
         margin-top: 0;
     }
-
-    .attribution{
+    .attribution-mobile{
+        display: none;
+    }
+    .attribution-desk{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        width: 35vw;
         position: absolute;
-        bottom: 0;
+        bottom: 20px;
+        left: 20px;
+        font-size: 1.5rem;
 
     }
+    .attribution-desk a{
+        color: var(--Dark-grayish-violet);
+        margin: 0 10px;
+    }
 
-    
+
+
 }
 
 
